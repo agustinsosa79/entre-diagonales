@@ -1,0 +1,21 @@
+# Node modules (tanto para client como server)
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Archivos de entorno
+.env
+client/.env
+server/.env
+
+# Logs
+*.log
+client/*.log
+server/*.log
+
+# Build y producción
+client/build/
+server/dist/
+
+# VSCode settings (opcional)
+.vscode/
