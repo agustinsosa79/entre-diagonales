@@ -30,8 +30,6 @@ const crearTablas = async () => {
         console.log('tablas creadas correctamente');
     } catch (error) {
         console.log('error al enviar la tabla', error);
-    } finally {
-        await pool.end();
     }
 }
 
