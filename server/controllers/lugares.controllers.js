@@ -14,7 +14,7 @@ const obtenerLugares = async (req, res) => {
 const lugarPorId = async (req, res) => {
     const id = parseInt(req.params.id)
 
-     if (isNaN(id)) {
+    if (isNaN(id)) {
     return res.status(400).json({ mensaje: 'ID inválido' })
   }
   
@@ -46,14 +46,14 @@ const crearLugar = async (req, res) => {
     } = req.body
 
     if(!nombre || !direccion || !categoria_id ) {
-         return res.status(404).json({message: 'Faltan datos obligatorios'})
+        return res.status(404).json({message: 'Faltan datos obligatorios'})
     }
 
     try {
         const result = await pool.query(
             `INSERT INTO Lugares 
         (nombre, descripcion, direccion, categoria_id, telefono, email, sitio_web, horario)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
        RETURNING *`,
       [nombre, descripcion, direccion, categoria_id, telefono, email, sitio_web, horario]
         )
