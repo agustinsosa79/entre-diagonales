@@ -5,11 +5,10 @@ export const Navbar = () => {
   const links = [
     { to: "/", label: "Inicio" },
     { to: "/lugares", label: "Lugares" },
-    { to: "/contacto", label: "Contacto" },
   ];
 
   return (
-    <nav className="w-full border-b border-green-700 bg-green-700 p-10 mb-8 flex gap-8">
+    <nav className="w-full border-b border-green-700 bg-green-700 p-10 flex gap-8">
       {links.map(({ to, label }) => {
         return (
           <Link
